@@ -1,0 +1,66 @@
+$color-primary: #f59f00;
+$color-primary-lighter: #fcc419;
+$color-primary-darker: #e67700;
+
+$color-grey-light-1: #e9ecef;
+$color-grey-light-2: #dee2e6;
+$color-grey-light-3: #ced4da;
+
+$color-grey-dark-1: #868e96;
+$color-grey-dark-2: #495057;
+$color-grey-dark-3: #343a40;
+
+$font-default: 1.6rem;
+
+$color-black: #000;
+$color-white: #fff;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and(max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and(max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and(max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and(min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}
+
+// animation
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotateRight {
+  0% {
+    opacity: 0;
+    transform: rotate(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
